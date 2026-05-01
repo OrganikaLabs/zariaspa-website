@@ -1,0 +1,280 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Zariaspa Trading — Silk Road Edition
+ * Inspired by ancient Silk Road cartography. Parchment, ink, terracotta,
+ * lapis blue, and gold. Modern minimalist enterprise meets historic atlas.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Silk Road palette */
+  --color-parchment: var(--parchment);
+  --color-parchment-deep: var(--parchment-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-terracotta: var(--terracotta);
+  --color-lapis: var(--lapis);
+  --color-saffron: var(--saffron);
+  --color-jade: var(--jade);
+
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Crimson Pro", "Times New Roman", Georgia, serif;
+  --font-serif: "Crimson Pro", "Times New Roman", Georgia, serif;
+}
+
+:root {
+  --radius: 0.5rem;
+
+  /* Silk Road brand — Zariaspa: navy #0a2472 + saffron #ffba08 */
+  --parchment: oklch(0.94 0.04 85);          /* aged map paper */
+  --parchment-deep: oklch(0.88 0.06 80);     /* darker fold */
+  --ink: oklch(0.303 0.137 264.7);           /* #0a2472 brand navy — primary text */
+  --ink-soft: oklch(0.45 0.10 264);
+  --navy-deep: oklch(0.22 0.12 264.7);       /* darker navy for footer */
+  --saffron: oklch(0.831 0.170 81.4);        /* #ffba08 brand saffron */
+  --saffron-deep: oklch(0.74 0.17 75);
+  /* Routes & accents on parchment use saffron for contrast against navy ink */
+  --terracotta: oklch(0.831 0.170 81.4);     /* alias → saffron (route accent) */
+  --lapis: oklch(0.303 0.137 264.7);
+  --jade: oklch(0.55 0.09 165);
+
+  /* Semantic — Light (Parchment) */
+  --background: var(--parchment);
+  --foreground: var(--ink);
+  --card: oklch(0.96 0.03 85);
+  --card-foreground: var(--ink);
+  --popover: oklch(0.96 0.03 85);
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--parchment);
+  --secondary: oklch(0.91 0.04 80);
+  --secondary-foreground: var(--ink);
+  --muted: oklch(0.91 0.04 80);
+  --muted-foreground: var(--ink-soft);
+  --accent: var(--terracotta);
+  --accent-foreground: var(--parchment);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.78 0.05 70 / 0.5);
+  --input: oklch(0.78 0.05 70 / 0.5);
+  --ring: var(--terracotta);
+
+  --shadow-elevated: 0 30px 80px -30px oklch(0.303 0.137 264.7 / 0.35);
+  --shadow-warm: 0 0 0 1px oklch(0.831 0.170 81.4 / 0.45), 0 14px 40px -12px oklch(0.831 0.170 81.4 / 0.55);
+  --gradient-saffron: linear-gradient(135deg, oklch(0.88 0.16 85), oklch(0.78 0.18 75));
+  --gradient-parchment: linear-gradient(180deg, oklch(0.95 0.04 85), oklch(0.9 0.06 78));
+  --grid-line: oklch(0.303 0.137 264.7 / 0.08);
+}
+
+.dark {
+  --background: oklch(0.94 0.04 85);
+  --foreground: oklch(0.28 0.04 40);
+  --card: oklch(0.96 0.03 85);
+  --card-foreground: oklch(0.28 0.04 40);
+  --popover: oklch(0.96 0.03 85);
+  --popover-foreground: oklch(0.28 0.04 40);
+  --primary: oklch(0.58 0.16 35);
+  --primary-foreground: oklch(0.96 0.03 85);
+  --secondary: oklch(0.91 0.04 80);
+  --secondary-foreground: oklch(0.28 0.04 40);
+  --muted: oklch(0.91 0.04 80);
+  --muted-foreground: oklch(0.45 0.05 50);
+  --accent: oklch(0.58 0.16 35);
+  --accent-foreground: oklch(0.96 0.03 85);
+  --border: oklch(0.78 0.05 70 / 0.5);
+  --input: oklch(0.78 0.05 70 / 0.5);
+  --ring: oklch(0.58 0.16 35);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    background-image:
+      radial-gradient(at 12% 8%, oklch(0.85 0.08 70 / 0.5) 0, transparent 45%),
+      radial-gradient(at 88% 92%, oklch(0.85 0.1 50 / 0.4) 0, transparent 45%),
+      radial-gradient(at 50% 50%, oklch(0.92 0.05 80 / 0.3) 0, transparent 60%);
+  }
+  ::selection {
+    background: var(--terracotta);
+    color: var(--parchment);
+  }
+}
+
+@layer utilities {
+  /* Silk Road palette utilities */
+  .bg-parchment { background-color: var(--parchment); }
+  .bg-parchment-deep { background-color: var(--parchment-deep); }
+  .bg-ink { background-color: var(--ink); }
+  .bg-terracotta { background-color: var(--terracotta); }
+  .bg-lapis { background-color: var(--lapis); }
+  .bg-saffron { background-color: var(--saffron); }
+
+  .text-parchment { color: var(--parchment); }
+  .text-ink { color: var(--ink); }
+  .text-ink-soft { color: var(--ink-soft); }
+  .text-terracotta { color: var(--terracotta); }
+  .text-lapis { color: var(--lapis); }
+  .text-saffron { color: var(--saffron); }
+
+  .border-hairline { border-color: oklch(0.303 0.137 264.7 / 0.15); }
+  .border-route { border-color: oklch(0.831 0.170 81.4 / 0.5); }
+
+  .font-serif-display { font-family: var(--font-display); }
+
+  /* Aged paper texture overlay */
+  .paper-texture {
+    background-image:
+      radial-gradient(circle at 20% 30%, oklch(0.75 0.08 50 / 0.18) 0, transparent 25%),
+      radial-gradient(circle at 75% 70%, oklch(0.7 0.1 40 / 0.15) 0, transparent 30%),
+      radial-gradient(circle at 50% 90%, oklch(0.65 0.1 35 / 0.12) 0, transparent 40%);
+  }
+
+  /* Cartographer's grid (lat/long lines) */
+  .map-grid {
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .glass {
+    background: oklch(0.94 0.04 85 / 0.78);
+    backdrop-filter: blur(16px) saturate(120%);
+    -webkit-backdrop-filter: blur(16px) saturate(120%);
+    border: 1px solid oklch(0.303 0.137 264.7 / 0.12);
+  }
+  .glass-light {
+    background: oklch(0.96 0.03 85 / 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid oklch(0.303 0.137 264.7 / 0.1);
+  }
+
+  .text-balance { text-wrap: balance; }
+  .tracking-display { letter-spacing: -0.02em; }
+
+  .terracotta-glow:hover {
+    box-shadow: var(--shadow-warm);
+  }
+
+  /* Wax seal — brand navy */
+  .wax-seal {
+    background: radial-gradient(circle at 35% 30%, oklch(0.4 0.14 264), oklch(0.22 0.12 264));
+    box-shadow: inset 0 -4px 8px oklch(0.18 0.1 264 / 0.6), 0 6px 16px oklch(0.303 0.137 264.7 / 0.5);
+  }
+
+  /* Dashed cartographer route — saffron */
+  .route-dash {
+    background-image: linear-gradient(90deg, var(--saffron) 50%, transparent 50%);
+    background-size: 12px 2px;
+    background-repeat: repeat-x;
+    background-position: 0 50%;
+  }
+}
+
+/* Animations */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+}
+.reveal.in-view {
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes arrow-slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+@keyframes arrow-slide-rtl {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+.group:hover .cta-arrow {
+  animation: arrow-slide 1s ease-in-out infinite;
+}
+[dir="rtl"] .cta-arrow {
+  transform: scaleX(-1);
+}
+[dir="rtl"] .group:hover .cta-arrow {
+  animation: arrow-slide-rtl 1s ease-in-out infinite;
+}
+
+/* RTL: mirror the marquee direction so it flows naturally */
+[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
+
+/* Crimson Pro / Source Sans 3 lack Arabic-script glyphs — fall back for RTL */
+[dir="rtl"] {
+  font-family: "Vazirmatn", "Noto Naskh Arabic", "Tahoma", system-ui, sans-serif;
+}
+[dir="rtl"] .font-serif-display {
+  font-family: "Noto Naskh Arabic", "Amiri", "Vazirmatn", serif;
+}
+
+@keyframes route-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes caravan-move {
+  from { offset-distance: 0%; }
+  to { offset-distance: 100%; }
+}
+
+@keyframes pulse-city {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.4); }
+}

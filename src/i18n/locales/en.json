@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "capabilities": "Capabilities",
+    "network": "Network",
+    "standards": "Standards",
+    "about": "About",
+    "contact": "Contact",
+    "partner": "Partner With Us",
+    "menu": "Menu"
+  },
+  "hero": {
+    "badge": "EST. ON THE ROUTES OF THE SILK ROAD",
+    "from": "From",
+    "kabul": "Kabul",
+    "themodern": "the modern",
+    "silkroad": "Silk Road",
+    "forhealthcare": "for global healthcare.",
+    "lede": "Caravans once carried silk, spices, and medicine across continents. Today Zariaspa Trading carries premium medical equipment, healthcare technology, and pharmaceuticals along the same enduring corridors.",
+    "ctaPrimary": "Partner with Zariaspa",
+    "ctaSecondary": "Trace our routes",
+    "stats": {
+      "countries": "Countries served",
+      "partners": "Hospital partners",
+      "iso": "Certified ops",
+      "coldchain": "Cold-chain monitoring"
+    }
+  },
+  "bento": {
+    "eyebrow": "CARGO MANIFEST · CAPABILITIES",
+    "headline1": "A modern caravan",
+    "headline2": "for healthcare.",
+    "intro": "From hospital-grade imaging to last-mile pharma — engineered for compliance, speed, and the same provenance that built the original Silk Road.",
+    "via": "via",
+    "explore": "Explore",
+    "tiles": {
+      "imaging": { "eyebrow": "01 — IMAGING", "title": "Medical Equipment", "desc": "Procurement and white-glove deployment of MRI, CT, ultrasound, and surgical systems from tier-1 OEMs across Europe and East Asia." },
+      "pharma": { "eyebrow": "02 — PHARMA", "title": "Supply Chain", "desc": "Validated cold-chain corridors with real-time temperature & GPS provenance." },
+      "healthtech": { "eyebrow": "03 — HEALTHTECH", "title": "Healthcare Tech", "desc": "Diagnostics, IoT devices, and hospital information systems integration." },
+      "compliance": { "eyebrow": "04 — COMPLIANCE", "title": "Regulatory Affairs", "desc": "WHO, ISO 13485, GDP & MoPH alignment — handled end-to-end by our affairs desk." },
+      "infra": { "eyebrow": "05 — INFRASTRUCTURE", "title": "Cold-Chain Network", "desc": "Pharmaceutical-grade storage with 2–8°C and –20°C zones across Kabul, Dubai, and Samarkand hubs." }
+    }
+  },
+  "trust": {
+    "eyebrow": "SEAL OF TRUST · CERTIFIED · ALIGNED"
+  },
+  "footer": {
+    "tagline1": "Dispatches from the",
+    "tagline2": "Silk Road",
+    "newsletterDesc": "Quarterly briefings on med-tech procurement, regulatory shifts, and regional logistics across our caravan network.",
+    "emailPlaceholder": "you@hospital.org",
+    "subscribe": "Subscribe",
+    "subscribed": "Subscribed",
+    "address": "Wazir Akbar Khan, Kabul, Afghanistan",
+    "cols": {
+      "capabilities": "Capabilities",
+      "network": "Caravan Network",
+      "company": "Company"
+    },
+    "items": {
+      "medEquipment": "Medical Equipment",
+      "pharmaSupply": "Pharma Supply Chain",
+      "healthtech": "Healthcare Tech",
+      "coldchain": "Cold-Chain Network",
+      "regulatory": "Regulatory",
+      "kabulHQ": "Kabul HQ",
+      "dubaiHub": "Dubai Hub",
+      "istanbulOffice": "Istanbul Office",
+      "samarkandLiaison": "Samarkand Liaison",
+      "frankfurtDesk": "Frankfurt Desk",
+      "about": "About",
+      "leadership": "Leadership",
+      "compliance": "Compliance",
+      "press": "Press",
+      "careers": "Careers"
+    },
+    "legal": {
+      "rights": "Zariaspa Trading Co. — Carrying medicine along ancient routes.",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "compliance": "Compliance"
+    }
+  }
+}
