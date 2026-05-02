@@ -10,6 +10,7 @@ function Tile({
   desc,
   icon,
   city,
+  to,
 }: {
   className?: string;
   eyebrow: string;
@@ -17,10 +18,12 @@ function Tile({
   desc: string;
   icon?: React.ReactNode;
   city?: string;
+  to: string;
 }) {
   const { t } = useTranslation();
   return (
-    <div
+    <Link
+      to={to}
       className={`group relative isolate flex flex-col overflow-hidden rounded-2xl border border-hairline bg-card transition-all duration-500 hover:-translate-y-1 hover:border-terracotta/50 hover:shadow-[0_20px_50px_-20px_oklch(0.58_0.16_35/0.35)] ${className}`}
     >
       <div className="pointer-events-none absolute inset-0 map-grid opacity-40" aria-hidden="true" />
@@ -51,7 +54,7 @@ function Tile({
           {t("bento.explore")} <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:rotate-12" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
