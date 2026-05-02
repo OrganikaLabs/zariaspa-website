@@ -267,7 +267,6 @@
 [dir="rtl"] h4,
 [dir="rtl"] h5,
 [dir="rtl"] h6 {
-  font-family: "Noto Naskh Arabic", "Vazirmatn", serif;
   font-style: normal !important;
   line-height: 1.55;
 }
@@ -293,9 +292,7 @@
 [dir="rtl"] li,
 [dir="rtl"] label,
 [dir="rtl"] input,
-[dir="rtl"] textarea,
-[dir="rtl"] button {
-  font-family: "Noto Naskh Arabic", "Vazirmatn", "Tahoma", system-ui, sans-serif;
+[dir="rtl"] textarea {
   line-height: 1.85;
 }
 
