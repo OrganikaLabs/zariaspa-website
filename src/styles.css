@@ -271,18 +271,12 @@
   line-height: 1.55;
 }
 [dir="rtl"] h1,
-[dir="rtl"] .font-serif-display {
+[dir="rtl"] h1.font-serif-display {
   font-family: "Noto Kufi Arabic", "Noto Naskh Arabic", "Vazirmatn", serif;
   font-style: normal !important;
   /* Arabic ascenders/descenders need more breathing room than Latin display type */
   line-height: 1.45 !important;
   padding-block: 0.05em;
-}
-/* Apply Naskh family explicitly to .font-serif-display when used on non-h1 (subheads) */
-[dir="rtl"] h2.font-serif-display,
-[dir="rtl"] h3.font-serif-display,
-[dir="rtl"] h4.font-serif-display {
-  font-family: "Noto Naskh Arabic", "Vazirmatn", serif;
 }
 [dir="rtl"] .italic {
   font-style: normal;
