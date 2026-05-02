@@ -10,18 +10,19 @@ import "@/i18n";
 export type PageImage = { src: string; alt: string; w: number; h: number };
 
 interface PageLayoutProps {
-  eyebrow: string;
-  title: string;
-  italicWord?: string;
-  lede: string;
+  /** i18n key prefix under `pages.*` (e.g. "about", "imaging"). */
+  tKey: string;
+  /** Ordered list of paragraph keys per body section, e.g. [["s1h",["s1p1","s1p2"]], ...] */
+  sections: { headingKey?: string; paragraphKeys: string[] }[];
   hero: PageImage;
-  body: { heading?: string; paragraphs: string[] }[];
   gallery: PageImage[];
 }
 
-export function PageLayout({ eyebrow, title, italicWord, lede, hero, body, gallery }: PageLayoutProps) {
+export function PageLayout({ tKey, sections, hero, gallery }: PageLayoutProps) {
   useHtmlLangDir();
   const { t } = useTranslation();
+  const k = (s: string) => `pages.${tKey}.${s}`;
+
   return (
     <main className="min-h-screen bg-parchment text-ink">
       <Navbar />
@@ -37,32 +38,27 @@ export function PageLayout({ eyebrow, title, italicWord, lede, hero, body, galle
               className="inline-flex items-center gap-2 text-xs font-medium tracking-[0.18em] text-ink-soft transition-colors hover:text-terracotta"
             >
               <ArrowLeft className="h-3.5 w-3.5 rtl:rotate-180" />
-              {t("nav.menu")} · Zariaspa
+              {t("common.back")} · Zariaspa
             </Link>
           </Reveal>
 
           <Reveal delay={120}>
             <p className="mt-10 flex items-center gap-3 text-[11px] font-medium tracking-[0.28em] text-terracotta">
               <span className="route-dash h-px w-10" />
-              {eyebrow}
+              {t(k("eyebrow"))}
             </p>
           </Reveal>
 
           <Reveal delay={200}>
             <h1 className="font-serif-display tracking-display mt-5 text-balance text-5xl font-medium leading-[1.02] md:text-7xl lg:text-[88px]">
-              {title}
-              {italicWord && (
-                <>
-                  {" "}
-                  <span className="italic text-terracotta">{italicWord}</span>
-                </>
-              )}
+              {t(k("title"))}{" "}
+              <span className="italic text-terracotta">{t(k("italic"))}</span>
             </h1>
           </Reveal>
 
           <Reveal delay={320}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
-              {lede}
+              {t(k("lede"))}
             </p>
           </Reveal>
 
@@ -86,17 +82,17 @@ export function PageLayout({ eyebrow, title, italicWord, lede, hero, body, galle
         <div className="absolute inset-0 paper-texture opacity-50" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 md:px-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7 lg:pe-8">
-            {body.map((section, i) => (
+            {sections.map((section, i) => (
               <Reveal key={i} delay={i * 80}>
                 <div className="mb-12">
-                  {section.heading && (
+                  {section.headingKey && (
                     <h2 className="font-serif-display mb-5 text-3xl font-medium leading-tight tracking-tight text-ink md:text-4xl">
-                      {section.heading}
+                      {t(k(section.headingKey))}
                     </h2>
                   )}
-                  {section.paragraphs.map((p, j) => (
+                  {section.paragraphKeys.map((pk, j) => (
                     <p key={j} className="mb-4 text-base leading-relaxed text-ink-soft md:text-[17px]">
-                      {p}
+                      {t(k(pk))}
                     </p>
                   ))}
                 </div>
