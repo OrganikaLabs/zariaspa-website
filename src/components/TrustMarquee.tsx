@@ -8,7 +8,7 @@ import gs1Logo from "@/assets/partners/gs1.png";
 import mophLogo from "@/assets/partners/moph.png";
 import emaLogo from "@/assets/partners/ema.png";
 import picsLogo from "@/assets/partners/pics.png";
-import unicefLogo from "@/assets/partners/unicef.png";
+import unicefLogo from "@/assets/partners/unicef.svg";
 
 const PARTNERS = [
   { name: "WHO", src: whoLogo },
