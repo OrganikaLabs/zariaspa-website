@@ -1,6 +1,6 @@
 {
   "nav": {
-    "capabilities": "Capabilities",
+    "capabilities": "Solutions",
     "network": "Network",
     "standards": "Standards",
     "about": "About",
@@ -26,9 +26,9 @@
     }
   },
   "bento": {
-    "eyebrow": "CARGO MANIFEST · CAPABILITIES",
+    "eyebrow": "CARGO MANIFEST · SOLUTIONS",
     "headline1": "A modern caravan",
-    "headline2": "for healthcare.",
+    "headline2": "for innovation.",
     "intro": "From hospital-grade imaging to last-mile pharma — engineered for compliance, speed, and the same provenance that built the original Silk Road.",
     "via": "via",
     "explore": "Explore",
@@ -52,7 +52,7 @@
     "subscribed": "Subscribed",
     "address": "Wazir Akbar Khan, Kabul, Afghanistan",
     "cols": {
-      "capabilities": "Capabilities",
+      "capabilities": "Solutions",
       "network": "Caravan Network",
       "company": "Company"
     },
