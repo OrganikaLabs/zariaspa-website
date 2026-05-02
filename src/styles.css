@@ -257,12 +257,23 @@
   animation-direction: reverse;
 }
 
-/* Crimson Pro / Source Sans 3 lack Arabic-script glyphs — fall back for RTL */
+/* Crimson Pro / Source Sans 3 lack Arabic-script glyphs — fall back for RTL.
+ * Title font: Noto Kufi Arabic. Body font: Noto Naskh Arabic. */
 [dir="rtl"] {
-  font-family: "Vazirmatn", "Noto Naskh Arabic", "Tahoma", system-ui, sans-serif;
+  font-family: "Noto Naskh Arabic", "Vazirmatn", "Tahoma", system-ui, sans-serif;
 }
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
 [dir="rtl"] .font-serif-display {
-  font-family: "Noto Naskh Arabic", "Amiri", "Vazirmatn", serif;
+  font-family: "Noto Kufi Arabic", "Noto Naskh Arabic", "Vazirmatn", serif;
+  font-style: normal !important;
+}
+[dir="rtl"] .italic {
+  font-style: normal;
 }
 
 @keyframes route-draw {
