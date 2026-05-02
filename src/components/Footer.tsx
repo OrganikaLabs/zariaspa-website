@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, MapPin, Mail, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import zariaspaLogo from "@/assets/zariaspa-logo.png";
 
 export function Footer() {
   const { t } = useTranslation();
@@ -54,14 +55,13 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-16 border-b border-parchment/15 pb-20 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3">
-              <div className="wax-seal flex h-11 w-11 items-center justify-center rounded-full font-serif-display text-base font-bold text-parchment">
-                Z
-              </div>
-              <div className="leading-none">
-                <div className="font-serif-display text-base font-semibold tracking-[0.14em]">ZARIASPA</div>
-                <div className="text-[10px] tracking-[0.32em] text-parchment/60">EST · TRADING CO.</div>
-              </div>
+              <img
+                src={zariaspaLogo}
+                alt="Zariaspa Trading Co."
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
+
 
             <h3 className="font-serif-display tracking-display mt-10 max-w-md text-balance text-4xl font-medium leading-[1.1] md:text-5xl">
               {t("footer.tagline1")} <span className="italic text-saffron">{t("footer.tagline2")}</span>.
