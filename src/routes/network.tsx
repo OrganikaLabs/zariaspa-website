@@ -18,7 +18,7 @@ export const Route = createFileRoute("/network")({
   component: () => (
     <PageLayout
       tKey="network"
-      hero={{ src: "https://images.unsplash.com/photo-1518527989017-5baca7a58d3c?auto=format&fit=crop&q=80&w=1600", alt: "Aerial photography of a red tanker ship in deep blue water", w: 1600, h: 900 }}
+      hero={{ src: "https://images.unsplash.com/photo-1692607038273-8f45f4b0b1c7?fm=jpg&q=60&w=1600&auto=format&fit=crop", alt: "A close up of a plant with pink flowers - AI assistant in genomic studies", w: 1600, h: 900 }}
       sections={[
         { headingKey: "s1h", paragraphKeys: ["s1p1", "s1p2", "s1p3", "s1p4", "s1p5"] },
         { headingKey: "s2h", paragraphKeys: ["s2p1"] },
