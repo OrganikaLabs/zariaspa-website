@@ -33,7 +33,7 @@ export function TrustMarquee() {
     >
       <div className="absolute inset-0 paper-texture opacity-70" aria-hidden="true" />
       <div className="relative mx-auto mb-6 max-w-7xl px-6 md:px-10">
-        <p className="flex items-center gap-3 text-[11px] font-medium tracking-[0.28em] text-terracotta">
+        <p className="flex items-center gap-3 text-[11px] font-medium tracking-[0.28em] text-primary">
           <span className="route-dash h-px w-10" />
           {t("trust.eyebrow")}
         </p>
