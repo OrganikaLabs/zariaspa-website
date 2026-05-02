@@ -92,7 +92,7 @@ export function BentoGrid() {
               title={t("bento.tiles.imaging.title")}
               desc={t("bento.tiles.imaging.desc")}
               icon={<Activity className="h-3.5 w-3.5" />}
-              city="Frankfurt → Kabul"
+              city={t("bento.routes.imaging")}
             />
           </Reveal>
 
@@ -104,7 +104,7 @@ export function BentoGrid() {
               title={t("bento.tiles.pharma.title")}
               desc={t("bento.tiles.pharma.desc")}
               icon={<Truck className="h-3.5 w-3.5" />}
-              city="Istanbul → Kabul"
+              city={t("bento.routes.pharma")}
             />
           </Reveal>
 
@@ -116,7 +116,7 @@ export function BentoGrid() {
               title={t("bento.tiles.healthtech.title")}
               desc={t("bento.tiles.healthtech.desc")}
               icon={<Package className="h-3.5 w-3.5" />}
-              city="Xi'an → Kashgar"
+              city={t("bento.routes.healthtech")}
             />
           </Reveal>
 
@@ -128,7 +128,7 @@ export function BentoGrid() {
               title={t("bento.tiles.compliance.title")}
               desc={t("bento.tiles.compliance.desc")}
               icon={<ShieldCheck className="h-3.5 w-3.5" />}
-              city="Geneva ↔ Kabul"
+              city={t("bento.routes.compliance")}
             />
           </Reveal>
 
@@ -140,7 +140,7 @@ export function BentoGrid() {
               title={t("bento.tiles.infra.title")}
               desc={t("bento.tiles.infra.desc")}
               icon={<Thermometer className="h-3.5 w-3.5" />}
-              city="Samarkand · Dubai · Kabul"
+              city={t("bento.routes.infra")}
             />
           </Reveal>
         </div>
