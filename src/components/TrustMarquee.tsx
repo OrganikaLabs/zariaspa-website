@@ -3,7 +3,7 @@ import whoLogo from "@/assets/partners/who.png";
 import isoLogo from "@/assets/partners/iso13485.png";
 import gdpLogo from "@/assets/partners/gdp-eu.png";
 import uspLogo from "@/assets/partners/usp.png";
-import fdaLogo from "@/assets/partners/fda.png";
+import fdaLogo from "@/assets/partners/fda.svg";
 import gs1Logo from "@/assets/partners/gs1.png";
 import mophLogo from "@/assets/partners/moph.png";
 import emaLogo from "@/assets/partners/ema.png";
