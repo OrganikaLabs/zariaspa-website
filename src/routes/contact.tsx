@@ -41,18 +41,18 @@ function ContactPage() {
           <Reveal>
             <p className="flex items-center gap-3 text-[11px] font-medium tracking-[0.28em] text-terracotta">
               <span className="route-dash h-px w-10" />
-              CONTACT · DISPATCH · BEGIN
+              {t("pages.contact.eyebrow")}
             </p>
           </Reveal>
           <Reveal delay={120}>
             <h1 className="font-serif-display tracking-display mt-5 text-balance text-5xl font-medium leading-[1.02] md:text-7xl lg:text-[88px]">
-              Begin a{" "}
-              <span className="italic text-terracotta">conversation.</span>
+              {t("pages.contact.title")}{" "}
+              <span className="italic text-terracotta">{t("pages.contact.italic")}</span>
             </h1>
           </Reveal>
           <Reveal delay={240}>
             <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink-soft md:text-lg">
-              Hospitals, ministries, NGOs, and manufacturers — write to us. We answer every inquiry within one business day, in English, Dari, Pashto, or Arabic.
+              {t("pages.contact.lede")}
             </p>
           </Reveal>
         </div>
@@ -69,31 +69,31 @@ function ContactPage() {
               className="rounded-3xl border border-hairline bg-card p-8 shadow-[var(--shadow-elevated)] md:p-10"
             >
               <h2 className="font-serif-display text-3xl font-medium tracking-tight md:text-4xl">
-                Send a dispatch
+                {t("pages.contact.formTitle")}
               </h2>
-              <p className="mt-2 text-sm text-ink-soft">All fields required.</p>
+              <p className="mt-2 text-sm text-ink-soft">{t("pages.contact.formNote")}</p>
 
               <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
                 <label className="flex flex-col gap-2 text-xs font-medium tracking-[0.18em] text-ink-soft">
-                  YOUR NAME
+                  {t("pages.contact.name")}
                   <input
                     required
                     type="text"
                     className="rounded-xl border border-hairline bg-parchment px-4 py-3 text-base text-ink placeholder:text-ink-soft/60 focus:border-terracotta focus:outline-none"
-                    placeholder="Dr. Aria Kohistani"
+                    placeholder={t("pages.contact.namePh")}
                   />
                 </label>
                 <label className="flex flex-col gap-2 text-xs font-medium tracking-[0.18em] text-ink-soft">
-                  ORGANIZATION
+                  {t("pages.contact.org")}
                   <input
                     required
                     type="text"
                     className="rounded-xl border border-hairline bg-parchment px-4 py-3 text-base text-ink placeholder:text-ink-soft/60 focus:border-terracotta focus:outline-none"
-                    placeholder="Kabul Medical University"
+                    placeholder={t("pages.contact.orgPh")}
                   />
                 </label>
                 <label className="flex flex-col gap-2 text-xs font-medium tracking-[0.18em] text-ink-soft md:col-span-2">
-                  EMAIL
+                  {t("pages.contact.email")}
                   <input
                     required
                     type="email"
@@ -102,12 +102,12 @@ function ContactPage() {
                   />
                 </label>
                 <label className="flex flex-col gap-2 text-xs font-medium tracking-[0.18em] text-ink-soft md:col-span-2">
-                  HOW CAN WE HELP?
+                  {t("pages.contact.help")}
                   <textarea
                     required
                     rows={5}
                     className="resize-none rounded-xl border border-hairline bg-parchment px-4 py-3 text-base text-ink placeholder:text-ink-soft/60 focus:border-terracotta focus:outline-none"
-                    placeholder="A short note about your project, equipment, or supply needs..."
+                    placeholder={t("pages.contact.helpPh")}
                   />
                 </label>
               </div>
@@ -116,7 +116,7 @@ function ContactPage() {
                 type="submit"
                 className="group mt-8 inline-flex items-center gap-3 rounded-full bg-saffron px-7 py-4 text-sm font-semibold text-ink transition-all terracotta-glow"
               >
-                {submitted ? "Dispatch received — we'll be in touch" : "Send dispatch"}
+                {submitted ? t("pages.contact.sent") : t("pages.contact.send")}
                 <ArrowRight className="cta-arrow h-4 w-4" />
               </button>
             </form>
@@ -144,7 +144,7 @@ function ContactPage() {
               </div>
 
               <div className="rounded-2xl border border-hairline bg-card p-6">
-                <p className="text-[11px] font-semibold tracking-[0.22em] text-terracotta">REACH US</p>
+                <p className="text-[11px] font-semibold tracking-[0.22em] text-terracotta">{t("pages.contact.reachUs")}</p>
                 <ul className="mt-4 space-y-3 text-sm text-ink-soft">
                   <li className="flex items-start gap-3">
                     <MapPin className="mt-0.5 h-4 w-4 text-terracotta" />

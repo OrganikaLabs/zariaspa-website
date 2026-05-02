@@ -17,34 +17,12 @@ export const Route = createFileRoute("/network")({
   }),
   component: () => (
     <PageLayout
-      eyebrow="THE NETWORK"
-      title="A caravan that never"
-      italicWord="stops moving."
-      lede="Five offices, three cold-chain hubs, and a partner network that touches forty countries — the routes that once carried silk now carry life-saving medicine, every leg watched in real time."
+      tKey="network"
       hero={{ src: img1, alt: "Vintage atlas-style map showing Zariaspa trade routes connecting Kabul, Dubai, Istanbul, Frankfurt, and Samarkand", w: 1600, h: 900 }}
-      body={[
-        {
-          heading: "Hubs along the route",
-          paragraphs: [
-            "Kabul HQ — our home and operational nerve center, with 3,200 m² of qualified pharmaceutical storage and a 24/7 control tower watching every shipment in motion.",
-            "Dubai Hub — the regional consolidation point where Frankfurt's freight forwarders, Mumbai's manufacturers, and East Asia's OEMs converge before the final overland leg.",
-            "Istanbul Office — the bridge between European procurement and Central Asian delivery, handling customs preparation and dossier translation.",
-            "Samarkand Liaison — our overland gateway, reviving the original Silk Road as a modern corridor for medical cargo.",
-            "Frankfurt Desk — embedded with European OEMs and freight forwarders to compress lead times by weeks.",
-          ],
-        },
-        {
-          heading: "Corridors, not just routes",
-          paragraphs: [
-            "We don't ship — we move along corridors. Each one is pre-qualified, thermally mapped, customs-prepared, and equipped with backup contingencies. When one border slows, traffic flows through another within hours, not days.",
-          ],
-        },
-        {
-          heading: "A single point of contact",
-          paragraphs: [
-            "Wherever a shipment is, whoever handles it, the customer talks to one Zariaspa project lead. That accountability is what turns a network into a partner.",
-          ],
-        },
+      sections={[
+        { headingKey: "s1h", paragraphKeys: ["s1p1", "s1p2", "s1p3", "s1p4", "s1p5"] },
+        { headingKey: "s2h", paragraphKeys: ["s2p1"] },
+        { headingKey: "s3h", paragraphKeys: ["s3p1"] },
       ]}
       gallery={[
         { src: img2, alt: "Cargo plane loading pharmaceutical containers at dusk", w: 1024, h: 1024 },
