@@ -3,6 +3,7 @@ import { PageLayout } from "@/components/PageLayout";
 import img1 from "@/assets/pages/network-1.jpg";
 import img2 from "@/assets/pages/network-2.jpg";
 import img3 from "@/assets/pages/network-3.jpg";
+import tankerShip from "@/assets/pages/tanker-ship.jpg";
 
 export const Route = createFileRoute("/network")({
   head: () => ({
@@ -18,7 +19,7 @@ export const Route = createFileRoute("/network")({
   component: () => (
     <PageLayout
       tKey="network"
-      hero={{ src: "https://images.unsplash.com/photo-1518523310000-09173872210f?auto=format&fit=crop&q=80&w=1600", alt: "Aerial photography of a red tanker ship in deep blue water", w: 1600, h: 900 }}
+      hero={{ src: tankerShip, alt: "Aerial photography of a red tanker ship in deep blue water", w: 1600, h: 900 }}
       sections={[
         { headingKey: "s1h", paragraphKeys: ["s1p1", "s1p2", "s1p3", "s1p4", "s1p5"] },
         { headingKey: "s2h", paragraphKeys: ["s2p1"] },
