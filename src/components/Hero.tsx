@@ -2,9 +2,11 @@ import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "./Reveal";
 import silkroadMap from "@/assets/silkroad-map.png";
+import { localizeDigits } from "@/i18n/digits";
 
 export function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const ld = (s: string) => localizeDigits(s, i18n.language);
   return (
     <section className="relative isolate overflow-hidden bg-parchment text-ink">
       <img
@@ -78,10 +80,10 @@ export function Hero() {
         <Reveal delay={560}>
           <dl className="mt-20 grid max-w-3xl grid-cols-2 gap-6 border-t border-ink/15 pt-8 md:grid-cols-4">
             {[
-              ["40+", t("hero.stats.countries")],
-              ["120+", t("hero.stats.partners")],
-              ["ISO 13485", t("hero.stats.iso")],
-              ["24 / 7", t("hero.stats.coldchain")],
+              [ld("40+"), t("hero.stats.countries")],
+              [ld("120+"), t("hero.stats.partners")],
+              [ld("ISO 13485"), t("hero.stats.iso")],
+              [ld("24 / 7"), t("hero.stats.coldchain")],
             ].map(([k, v]) => (
               <div key={v}>
                 <dt className="font-serif-display text-3xl font-medium tracking-tight text-ink md:text-4xl">
