@@ -1,5 +1,6 @@
 import { ArrowUpRight, Activity, Truck, ShieldCheck, Thermometer, Package } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 
 function Tile({
@@ -9,6 +10,7 @@ function Tile({
   desc,
   icon,
   city,
+  to,
 }: {
   className?: string;
   eyebrow: string;
@@ -16,10 +18,12 @@ function Tile({
   desc: string;
   icon?: React.ReactNode;
   city?: string;
+  to: string;
 }) {
   const { t } = useTranslation();
   return (
-    <div
+    <Link
+      to={to}
       className={`group relative isolate flex flex-col overflow-hidden rounded-2xl border border-hairline bg-card transition-all duration-500 hover:-translate-y-1 hover:border-terracotta/50 hover:shadow-[0_20px_50px_-20px_oklch(0.58_0.16_35/0.35)] ${className}`}
     >
       <div className="pointer-events-none absolute inset-0 map-grid opacity-40" aria-hidden="true" />
@@ -50,7 +54,7 @@ function Tile({
           {t("bento.explore")} <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:rotate-12" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -82,6 +86,7 @@ export function BentoGrid() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-[300px_300px_300px]">
           <Reveal className="md:col-span-4 md:row-span-2">
             <Tile
+              to="/solutions/imaging"
               className="h-full min-h-[440px]"
               eyebrow={t("bento.tiles.imaging.eyebrow")}
               title={t("bento.tiles.imaging.title")}
@@ -93,6 +98,7 @@ export function BentoGrid() {
 
           <Reveal delay={120} className="md:col-span-2">
             <Tile
+              to="/solutions/pharma"
               className="h-full min-h-[300px]"
               eyebrow={t("bento.tiles.pharma.eyebrow")}
               title={t("bento.tiles.pharma.title")}
@@ -104,6 +110,7 @@ export function BentoGrid() {
 
           <Reveal delay={200} className="md:col-span-2">
             <Tile
+              to="/solutions/healthtech"
               className="h-full min-h-[300px]"
               eyebrow={t("bento.tiles.healthtech.eyebrow")}
               title={t("bento.tiles.healthtech.title")}
@@ -115,6 +122,7 @@ export function BentoGrid() {
 
           <Reveal delay={120} className="md:col-span-3">
             <Tile
+              to="/solutions/compliance"
               className="h-full min-h-[280px]"
               eyebrow={t("bento.tiles.compliance.eyebrow")}
               title={t("bento.tiles.compliance.title")}
@@ -126,6 +134,7 @@ export function BentoGrid() {
 
           <Reveal delay={200} className="md:col-span-3">
             <Tile
+              to="/solutions/infrastructure"
               className="h-full min-h-[280px]"
               eyebrow={t("bento.tiles.infra.eyebrow")}
               title={t("bento.tiles.infra.title")}

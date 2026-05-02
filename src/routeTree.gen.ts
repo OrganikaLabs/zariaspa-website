@@ -9,38 +9,200 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StandardsRouteImport } from './routes/standards'
+import { Route as NetworkRouteImport } from './routes/network'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
+import { Route as SolutionsPharmaRouteImport } from './routes/solutions.pharma'
+import { Route as SolutionsInfrastructureRouteImport } from './routes/solutions.infrastructure'
+import { Route as SolutionsImagingRouteImport } from './routes/solutions.imaging'
+import { Route as SolutionsHealthtechRouteImport } from './routes/solutions.healthtech'
+import { Route as SolutionsComplianceRouteImport } from './routes/solutions.compliance'
 
+const StandardsRoute = StandardsRouteImport.update({
+  id: '/standards',
+  path: '/standards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NetworkRoute = NetworkRouteImport.update({
+  id: '/network',
+  path: '/network',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
+  id: '/solutions/',
+  path: '/solutions/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsPharmaRoute = SolutionsPharmaRouteImport.update({
+  id: '/solutions/pharma',
+  path: '/solutions/pharma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsInfrastructureRoute = SolutionsInfrastructureRouteImport.update({
+  id: '/solutions/infrastructure',
+  path: '/solutions/infrastructure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsImagingRoute = SolutionsImagingRouteImport.update({
+  id: '/solutions/imaging',
+  path: '/solutions/imaging',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsHealthtechRoute = SolutionsHealthtechRouteImport.update({
+  id: '/solutions/healthtech',
+  path: '/solutions/healthtech',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolutionsComplianceRoute = SolutionsComplianceRouteImport.update({
+  id: '/solutions/compliance',
+  path: '/solutions/compliance',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/network': typeof NetworkRoute
+  '/standards': typeof StandardsRoute
+  '/solutions/compliance': typeof SolutionsComplianceRoute
+  '/solutions/healthtech': typeof SolutionsHealthtechRoute
+  '/solutions/imaging': typeof SolutionsImagingRoute
+  '/solutions/infrastructure': typeof SolutionsInfrastructureRoute
+  '/solutions/pharma': typeof SolutionsPharmaRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/network': typeof NetworkRoute
+  '/standards': typeof StandardsRoute
+  '/solutions/compliance': typeof SolutionsComplianceRoute
+  '/solutions/healthtech': typeof SolutionsHealthtechRoute
+  '/solutions/imaging': typeof SolutionsImagingRoute
+  '/solutions/infrastructure': typeof SolutionsInfrastructureRoute
+  '/solutions/pharma': typeof SolutionsPharmaRoute
+  '/solutions': typeof SolutionsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/network': typeof NetworkRoute
+  '/standards': typeof StandardsRoute
+  '/solutions/compliance': typeof SolutionsComplianceRoute
+  '/solutions/healthtech': typeof SolutionsHealthtechRoute
+  '/solutions/imaging': typeof SolutionsImagingRoute
+  '/solutions/infrastructure': typeof SolutionsInfrastructureRoute
+  '/solutions/pharma': typeof SolutionsPharmaRoute
+  '/solutions/': typeof SolutionsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/network'
+    | '/standards'
+    | '/solutions/compliance'
+    | '/solutions/healthtech'
+    | '/solutions/imaging'
+    | '/solutions/infrastructure'
+    | '/solutions/pharma'
+    | '/solutions/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/network'
+    | '/standards'
+    | '/solutions/compliance'
+    | '/solutions/healthtech'
+    | '/solutions/imaging'
+    | '/solutions/infrastructure'
+    | '/solutions/pharma'
+    | '/solutions'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/network'
+    | '/standards'
+    | '/solutions/compliance'
+    | '/solutions/healthtech'
+    | '/solutions/imaging'
+    | '/solutions/infrastructure'
+    | '/solutions/pharma'
+    | '/solutions/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  NetworkRoute: typeof NetworkRoute
+  StandardsRoute: typeof StandardsRoute
+  SolutionsComplianceRoute: typeof SolutionsComplianceRoute
+  SolutionsHealthtechRoute: typeof SolutionsHealthtechRoute
+  SolutionsImagingRoute: typeof SolutionsImagingRoute
+  SolutionsInfrastructureRoute: typeof SolutionsInfrastructureRoute
+  SolutionsPharmaRoute: typeof SolutionsPharmaRoute
+  SolutionsIndexRoute: typeof SolutionsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/standards': {
+      id: '/standards'
+      path: '/standards'
+      fullPath: '/standards'
+      preLoaderRoute: typeof StandardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/network': {
+      id: '/network'
+      path: '/network'
+      fullPath: '/network'
+      preLoaderRoute: typeof NetworkRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +210,63 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solutions/': {
+      id: '/solutions/'
+      path: '/solutions'
+      fullPath: '/solutions/'
+      preLoaderRoute: typeof SolutionsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/pharma': {
+      id: '/solutions/pharma'
+      path: '/solutions/pharma'
+      fullPath: '/solutions/pharma'
+      preLoaderRoute: typeof SolutionsPharmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/infrastructure': {
+      id: '/solutions/infrastructure'
+      path: '/solutions/infrastructure'
+      fullPath: '/solutions/infrastructure'
+      preLoaderRoute: typeof SolutionsInfrastructureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/imaging': {
+      id: '/solutions/imaging'
+      path: '/solutions/imaging'
+      fullPath: '/solutions/imaging'
+      preLoaderRoute: typeof SolutionsImagingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/healthtech': {
+      id: '/solutions/healthtech'
+      path: '/solutions/healthtech'
+      fullPath: '/solutions/healthtech'
+      preLoaderRoute: typeof SolutionsHealthtechRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solutions/compliance': {
+      id: '/solutions/compliance'
+      path: '/solutions/compliance'
+      fullPath: '/solutions/compliance'
+      preLoaderRoute: typeof SolutionsComplianceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  NetworkRoute: NetworkRoute,
+  StandardsRoute: StandardsRoute,
+  SolutionsComplianceRoute: SolutionsComplianceRoute,
+  SolutionsHealthtechRoute: SolutionsHealthtechRoute,
+  SolutionsImagingRoute: SolutionsImagingRoute,
+  SolutionsInfrastructureRoute: SolutionsInfrastructureRoute,
+  SolutionsPharmaRoute: SolutionsPharmaRoute,
+  SolutionsIndexRoute: SolutionsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
