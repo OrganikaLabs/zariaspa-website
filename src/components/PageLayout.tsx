@@ -9,18 +9,40 @@ import "@/i18n";
 
 export type PageImage = { src: string; alt: string; w: number; h: number };
 
-interface PageLayoutProps {
+interface PageLayoutPropsI18n {
   /** i18n key prefix under `pages.*` (e.g. "about", "imaging"). */
   tKey: string;
-  /** Ordered list of paragraph keys per body section, e.g. [["s1h",["s1p1","s1p2"]], ...] */
+  /** Ordered list of paragraph keys per body section. */
   sections: { headingKey?: string; paragraphKeys: string[] }[];
   hero: PageImage;
   gallery: PageImage[];
 }
 
-export function PageLayout({ tKey, sections, hero, gallery }: PageLayoutProps) {
+interface PageLayoutPropsLegacy {
+  eyebrow: string;
+  title: string;
+  italicWord: string;
+  lede: string;
+  hero: PageImage;
+  body: { heading?: string; paragraphs: string[] }[];
+  gallery: PageImage[];
+}
+
+type PageLayoutProps = PageLayoutPropsI18n | PageLayoutPropsLegacy;
+
+function isLegacy(p: PageLayoutProps): p is PageLayoutPropsLegacy {
+  return (p as PageLayoutPropsLegacy).title !== undefined;
+}
+
+export function PageLayout(props: PageLayoutProps) {
   useHtmlLangDir();
   const { t } = useTranslation();
+
+  if (isLegacy(props)) {
+    return <LegacyPageLayout {...props} />;
+  }
+
+  const { tKey, sections, hero, gallery } = props;
   const k = (s: string) => `pages.${tKey}.${s}`;
 
   return (
