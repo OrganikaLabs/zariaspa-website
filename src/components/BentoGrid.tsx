@@ -83,6 +83,7 @@ export function BentoGrid() {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-[300px_300px_300px]">
           <Reveal className="md:col-span-4 md:row-span-2">
             <Tile
+              to="/solutions/imaging"
               className="h-full min-h-[440px]"
               eyebrow={t("bento.tiles.imaging.eyebrow")}
               title={t("bento.tiles.imaging.title")}
@@ -94,6 +95,7 @@ export function BentoGrid() {
 
           <Reveal delay={120} className="md:col-span-2">
             <Tile
+              to="/solutions/pharma"
               className="h-full min-h-[300px]"
               eyebrow={t("bento.tiles.pharma.eyebrow")}
               title={t("bento.tiles.pharma.title")}
@@ -105,6 +107,7 @@ export function BentoGrid() {
 
           <Reveal delay={200} className="md:col-span-2">
             <Tile
+              to="/solutions/healthtech"
               className="h-full min-h-[300px]"
               eyebrow={t("bento.tiles.healthtech.eyebrow")}
               title={t("bento.tiles.healthtech.title")}
@@ -116,6 +119,7 @@ export function BentoGrid() {
 
           <Reveal delay={120} className="md:col-span-3">
             <Tile
+              to="/solutions/compliance"
               className="h-full min-h-[280px]"
               eyebrow={t("bento.tiles.compliance.eyebrow")}
               title={t("bento.tiles.compliance.title")}
@@ -127,6 +131,7 @@ export function BentoGrid() {
 
           <Reveal delay={200} className="md:col-span-3">
             <Tile
+              to="/solutions/infrastructure"
               className="h-full min-h-[280px]"
               eyebrow={t("bento.tiles.infra.eyebrow")}
               title={t("bento.tiles.infra.title")}
