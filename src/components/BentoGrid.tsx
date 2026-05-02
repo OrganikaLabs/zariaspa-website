@@ -1,5 +1,6 @@
 import { ArrowUpRight, Activity, Truck, ShieldCheck, Thermometer, Package } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 
 function Tile({
