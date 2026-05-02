@@ -267,6 +267,7 @@
 [dir="rtl"] h4,
 [dir="rtl"] h5,
 [dir="rtl"] h6 {
+  font-family: "Noto Kufi Arabic", "Noto Naskh Arabic", "Vazirmatn", sans-serif;
   font-style: normal !important;
   line-height: 1.55;
 }
