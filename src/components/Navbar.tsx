@@ -3,18 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Globe, ChevronDown, Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LANGS } from "@/i18n";
+import zariaspaLogo from "@/assets/zariaspa-logo.png";
 
-function Mark() {
-  return (
-    <svg viewBox="0 0 40 40" className="h-9 w-9" aria-hidden="true">
-      <circle cx="20" cy="20" r="18" fill="oklch(0.303 0.137 264.7)" />
-      <circle cx="20" cy="20" r="14" fill="none" stroke="oklch(0.831 0.170 81.4)" strokeWidth="0.7" opacity="0.7" />
-      <path d="M 20 6 L 23 20 L 20 34 L 17 20 Z" fill="oklch(0.831 0.170 81.4)" />
-      <path d="M 6 20 L 20 17 L 34 20 L 20 23 Z" fill="oklch(0.94 0.04 85)" opacity="0.85" />
-      <circle cx="20" cy="20" r="2" fill="oklch(0.303 0.137 264.7)" />
-    </svg>
-  );
-}
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
@@ -46,15 +36,10 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:h-20 md:px-10">
-        <Link to="/" className="flex items-center gap-3">
-          <Mark />
-          <div className="hidden flex-col leading-none sm:flex">
-            <span className="font-serif-display text-base font-semibold tracking-[0.14em] text-ink">
-              ZARIASPA
-            </span>
-            <span className="text-[10px] tracking-[0.32em] text-ink-soft">EST · TRADING CO.</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3" aria-label="Zariaspa Trading Co.">
+          <img src={zariaspaLogo} alt="Zariaspa Trading Co." className="h-10 w-auto md:h-12" />
         </Link>
+
 
         <ul className="hidden items-center gap-9 lg:flex">
           {NAV.map((n) => (
