@@ -33,11 +33,38 @@
     "via": "via",
     "explore": "Explore",
     "tiles": {
-      "imaging": { "eyebrow": "01 — IMAGING", "title": "Medical Equipment", "desc": "Procurement and white-glove deployment of MRI, CT, ultrasound, and surgical systems from tier-1 OEMs across Europe and East Asia." },
-      "pharma": { "eyebrow": "02 — PHARMA", "title": "Supply Chain", "desc": "Validated cold-chain corridors with real-time temperature & GPS provenance." },
-      "healthtech": { "eyebrow": "03 — HEALTHTECH", "title": "Healthcare Tech", "desc": "Diagnostics, IoT devices, and hospital information systems integration." },
-      "compliance": { "eyebrow": "04 — COMPLIANCE", "title": "Regulatory Affairs", "desc": "WHO, ISO 13485, GDP & MoPH alignment — handled end-to-end by our affairs desk." },
-      "infra": { "eyebrow": "05 — INFRASTRUCTURE", "title": "Cold-Chain Network", "desc": "Pharmaceutical-grade storage with 2–8°C and –20°C zones across Kabul, Dubai, and Samarkand hubs." }
+      "imaging": {
+        "eyebrow": "01 — IMAGING",
+        "title": "Medical Equipment",
+        "desc": "Procurement and white-glove deployment of MRI, CT, ultrasound, and surgical systems from tier-1 OEMs across Europe and East Asia."
+      },
+      "pharma": {
+        "eyebrow": "02 — PHARMA",
+        "title": "Supply Chain",
+        "desc": "Validated cold-chain corridors with real-time temperature & GPS provenance."
+      },
+      "healthtech": {
+        "eyebrow": "03 — HEALTHTECH",
+        "title": "Healthcare Tech",
+        "desc": "Diagnostics, IoT devices, and hospital information systems integration."
+      },
+      "compliance": {
+        "eyebrow": "04 — COMPLIANCE",
+        "title": "Regulatory Affairs",
+        "desc": "WHO, ISO 13485, GDP & MoPH alignment — handled end-to-end by our affairs desk."
+      },
+      "infra": {
+        "eyebrow": "05 — INFRASTRUCTURE",
+        "title": "Cold-Chain Network",
+        "desc": "Pharmaceutical-grade storage with 2–8°C and –20°C zones across Kabul, Dubai, and Samarkand hubs."
+      }
+    },
+    "routes": {
+      "imaging": "Frankfurt → Kabul",
+      "pharma": "Istanbul → Kabul",
+      "healthtech": "Xi'an → Kashgar",
+      "compliance": "Geneva ↔ Kabul",
+      "infra": "Samarkand · Dubai · Kabul"
     }
   },
   "trust": {
