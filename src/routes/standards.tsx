@@ -17,36 +17,13 @@ export const Route = createFileRoute("/standards")({
   }),
   component: () => (
     <PageLayout
-      eyebrow="STANDARDS · SEALS · ALIGNMENT"
-      title="The seal of trust, earned"
-      italicWord="every shipment."
-      lede="WHO, ISO 13485, EU GDP, FDA, EMA, USP, PIC/S, GS1, MoPH, UNICEF Supply — alignment with the bodies whose standards keep medicine safe, and a quality system that earns those alignments anew with every audit."
+      tKey="standards"
       hero={{ src: img1, alt: "Stack of certification documents bound with a red ribbon", w: 1280, h: 832 }}
-      body={[
-        {
-          heading: "ISO 13485 — quality for medical devices",
-          paragraphs: [
-            "Our quality management system is certified to ISO 13485:2016 across procurement, distribution, installation, and post-market surveillance of medical devices. Internal audits run quarterly; external recertification annually.",
-          ],
-        },
-        {
-          heading: "EU GDP — pharmaceutical distribution",
-          paragraphs: [
-            "Every Zariaspa-operated warehouse and route operates under European Good Distribution Practice for human medicinal products. Temperature mapping, deviation management, transport qualification, and supplier audits are continuous, not episodic.",
-          ],
-        },
-        {
-          heading: "WHO, FDA, EMA & ministerial alignment",
-          paragraphs: [
-            "We work only with manufacturers whose products carry valid WHO PQS listings, FDA 510(k) / PMA clearances, or CE marking under EU MDR / IVDR — and we maintain active registration with the Afghan MoPH and partner ministries across the region.",
-          ],
-        },
-        {
-          heading: "Serialization, traceability, and GS1",
-          paragraphs: [
-            "GS1-compliant barcoding and serialized item identification on every saleable unit, integrated with our chain-of-custody platform. From manufacturer pack to clinic shelf, every box can be traced — and every counterfeit caught.",
-          ],
-        },
+      sections={[
+        { headingKey: "s1h", paragraphKeys: ["s1p1"] },
+        { headingKey: "s2h", paragraphKeys: ["s2p1"] },
+        { headingKey: "s3h", paragraphKeys: ["s3p1"] },
+        { headingKey: "s4h", paragraphKeys: ["s4p1"] },
       ]}
       gallery={[
         { src: img2, alt: "Lab technician performing quality testing", w: 1024, h: 1024 },
