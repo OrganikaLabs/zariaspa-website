@@ -20,11 +20,11 @@ export function Navbar() {
   }, []);
 
   const NAV = [
-    { label: t("nav.capabilities"), href: "#capabilities" },
-    { label: t("nav.network"), href: "#network" },
-    { label: t("nav.standards"), href: "#standards" },
-    { label: t("nav.about"), href: "#about" },
-    { label: t("nav.contact"), href: "#contact" },
+    { label: t("nav.capabilities"), to: "/solutions" },
+    { label: t("nav.network"), to: "/network" },
+    { label: t("nav.standards"), to: "/standards" },
+    { label: t("nav.about"), to: "/about" },
+    { label: t("nav.contact"), to: "/contact" },
   ];
 
   const current = SUPPORTED_LANGS.find((l) => l.code === i18n.language) ?? SUPPORTED_LANGS[0];
@@ -43,13 +43,14 @@ export function Navbar() {
 
         <ul className="hidden items-center gap-9 lg:flex">
           {NAV.map((n) => (
-            <li key={n.href}>
-              <a
-                href={n.href}
+            <li key={n.to}>
+              <Link
+                to={n.to}
                 className="text-[13px] font-medium tracking-wide text-ink/75 transition-colors hover:text-terracotta"
+                activeProps={{ className: "text-terracotta" }}
               >
                 {n.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -91,12 +92,12 @@ export function Navbar() {
             )}
           </div>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="hidden rounded-full bg-terracotta px-4 py-2 text-xs font-semibold tracking-wide text-parchment transition-all hover:brightness-110 md:inline-flex"
           >
             {t("nav.partner")}
-          </a>
+          </Link>
 
           <button
             onClick={() => setMobileOpen((s) => !s)}
@@ -112,14 +113,14 @@ export function Navbar() {
         <div className="glass border-t border-hairline lg:hidden">
           <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-6 py-4">
             {NAV.map((n) => (
-              <li key={n.href}>
-                <a
-                  href={n.href}
+              <li key={n.to}>
+                <Link
+                  to={n.to}
                   onClick={() => setMobileOpen(false)}
                   className="block rounded-md px-3 py-2.5 text-sm text-ink/85 transition hover:bg-ink/5 hover:text-terracotta"
                 >
                   {n.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li className="mt-2 flex flex-wrap gap-2 border-t border-hairline px-3 pt-3">
