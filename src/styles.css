@@ -282,6 +282,10 @@
 [dir="rtl"] .italic {
   font-style: normal;
 }
+/* Inline span display-serif (e.g. bento tile city labels) — use body Naskh in RTL */
+[dir="rtl"] span.font-serif-display {
+  font-family: "Noto Naskh Arabic", "Vazirmatn", "Tahoma", system-ui, sans-serif;
+}
 /* Improve Arabic body legibility */
 [dir="rtl"] p,
 [dir="rtl"] li,
