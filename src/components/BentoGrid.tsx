@@ -65,7 +65,7 @@ export function BentoGrid() {
           <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
             <div className="max-w-2xl">
               <p className="mb-4 flex items-center gap-3 text-[11px] font-medium tracking-[0.28em] text-terracotta">
-                <span className="route-dash h-px w-10" />
+                <span className="route-dash h-px w-10 border-primary text-primary bg-primary" />
                 {t("bento.eyebrow")}
               </p>
               <h2 className="font-serif-display tracking-display text-balance text-5xl font-medium leading-[1.02] md:text-7xl">

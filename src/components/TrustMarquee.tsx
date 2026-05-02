@@ -34,7 +34,7 @@ export function TrustMarquee() {
       <div className="absolute inset-0 paper-texture opacity-70" aria-hidden="true" />
       <div className="relative mx-auto mb-6 max-w-7xl px-6 md:px-10">
         <p className="flex items-center gap-3 text-[11px] font-medium tracking-[0.28em] text-primary">
-          <span className="route-dash h-px w-10" />
+          <span className="route-dash h-px w-10 border-primary text-primary bg-primary" />
           {t("trust.eyebrow")}
         </p>
       </div>
@@ -48,7 +48,7 @@ export function TrustMarquee() {
               loading="lazy"
               width={512}
               height={512}
-              className="h-16 w-auto shrink-0 object-contain opacity-70 transition-opacity hover:opacity-100"
+              className="h-16 w-auto shrink-0 opacity-70 transition-opacity hover:opacity-100 object-contain"
             />
           ))}
         </div>
