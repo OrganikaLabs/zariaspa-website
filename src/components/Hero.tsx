@@ -35,7 +35,7 @@ export function Hero() {
           <div className="mb-8 inline-flex items-center gap-3 self-start glass rounded-full px-3.5 py-1.5 text-[11px] font-medium tracking-[0.22em] text-ink">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-terracotta opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-terracotta" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-terracotta shadow-[0_0_8px_2px_hsl(var(--terracotta)/0.8)]" />
             </span>
             {t("hero.badge")}
           </div>
