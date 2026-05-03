@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, MapPin, Mail, Phone } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import zariaspaLogo from "@/assets/zariaspa-logo.png";
+const zariaspaLogo = "/assets/zariaspa-logo.png";
 
 export function Footer() {
   const { t } = useTranslation();

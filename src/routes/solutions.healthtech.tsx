@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
-import img1 from "@/assets/pages/healthtech-1.jpg";
-import img2 from "@/assets/pages/healthtech-2.jpg";
-import img3 from "@/assets/pages/healthtech-3.jpg";
+const img1 = "/assets/pages/healthtech-1.jpg";
+const img2 = "/assets/pages/healthtech-2.jpg";
+const img3 = "/assets/pages/healthtech-3.jpg";
+
+
 
 export const Route = createFileRoute("/solutions/healthtech")({
   head: () => ({
