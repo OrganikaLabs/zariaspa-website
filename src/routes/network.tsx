@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageLayout } from "@/components/PageLayout";
-import img1 from "@/assets/pages/network-1.jpg";
-import img2 from "@/assets/pages/network-2.jpg";
-import img3 from "@/assets/pages/network-3.jpg";
-import tankerShip from "@/assets/pages/tanker-ship.jpg";
+const img1 = "/assets/pages/network-1.jpg";
+const img2 = "/assets/pages/network-2.jpg";
+const img3 = "/assets/pages/network-3.jpg";
+const tankerShip = "/assets/pages/tanker-ship.jpg";
+
+
+
 
 export const Route = createFileRoute("/network")({
   head: () => ({

@@ -1,14 +1,23 @@
 import { useTranslation } from "react-i18next";
-import whoLogo from "@/assets/partners/who.png";
-import isoLogo from "@/assets/partners/iso13485.png";
-import gdpLogo from "@/assets/partners/gdp-eu.png";
-import uspLogo from "@/assets/partners/usp.png";
-import fdaLogo from "@/assets/partners/fda.svg";
-import gs1Logo from "@/assets/partners/gs1.png";
-import mophLogo from "@/assets/partners/moph.png";
-import emaLogo from "@/assets/partners/ema.png";
-import picsLogo from "@/assets/partners/pics.png";
-import unicefLogo from "@/assets/partners/unicef.svg";
+const whoLogo = "/assets/partners/who.png";
+const isoLogo = "/assets/partners/iso13485.png";
+const gdpLogo = "/assets/partners/gdp-eu.png";
+const uspLogo = "/assets/partners/usp.png";
+const fdaLogo = "/assets/partners/fda.svg";
+const gs1Logo = "/assets/partners/gs1.png";
+const mophLogo = "/assets/partners/moph.png";
+const emaLogo = "/assets/partners/ema.png";
+const picsLogo = "/assets/partners/pics.png";
+const unicefLogo = "/assets/partners/unicef.svg";
+
+
+
+
+
+
+
+
+
 
 const PARTNERS = [
   { name: "WHO", src: whoLogo },
