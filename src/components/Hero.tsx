@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Reveal } from "./Reveal";
-import silkroadMap from "@/assets/silkroad-map.png";
+const silkroadMap = "https://i.imgur.com/XiVmqkn.png";
 import { localizeDigits } from "@/i18n/digits";
 
 export function Hero() {
